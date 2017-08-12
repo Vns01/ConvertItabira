@@ -16,7 +16,7 @@ namespace ConvertItabira
 
     public partial class Form1 : Form
     {
-        //classe para ajudar a atribuição dos valores da linha 4 
+        //Classe para ajudar a atribuição dos valores da linha 4 
         public class valores
         {
             public int Ano { get; set; }
