@@ -59,7 +59,7 @@ namespace ConvertItabira
                     File.Delete(arqConvertido);
 
 
-                //variaveis que conterá o fracmento de cada linha: 1 -- primeira, 4 -- segunda (possui + de 1) e 6 --ultima linha
+                //variaveis que conterá o fragmento de cada linha: 1 -- primeira, 4 -- segunda (possui + de 1) e 6 --ultima linha
                 string l1 = string.Empty, l6 = string.Empty;
                 List<valores> l4Valores = new List<valores>();
 
