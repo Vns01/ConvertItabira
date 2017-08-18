@@ -94,7 +94,7 @@ namespace ConvertItabira
                             if(sLinhaOld == '6' && arquivo[i].First() == '1')
                             {
 
-                                using(StreamWriter stw = new StreamWriter(arqConvertido, true))
+                                using(StreamWriter stw = new StreamWriter(arqConvertido, true, Encoding.Default))
                                 {
                                     stw.WriteLine(l1);
 
@@ -211,7 +211,7 @@ namespace ConvertItabira
                         }
                         else
                         {
-                            using(StreamWriter stw = new StreamWriter(arqConvertido, true))
+                            using(StreamWriter stw = new StreamWriter(arqConvertido, true, Encoding.Default))
                             {
                                 stw.WriteLine(l1);
 
