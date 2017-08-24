@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using System.Globalization;
 
 namespace ConvertItabira
 {
@@ -78,7 +79,7 @@ namespace ConvertItabira
                 try
                 {
                     //lendo todo o arquivo e setando em um único list
-                    using(StreamReader str = new StreamReader(arq.FullName, Encoding.Default))
+                    using(StreamReader str = new StreamReader(arq.FullName, Encoding.GetEncoding(CultureInfo.GetCultureInfo("pt-BR").TextInfo.ANSICodePage)))
                     {
 
                         while((linha = str.ReadLine()) != null)
@@ -94,7 +95,7 @@ namespace ConvertItabira
                             if(sLinhaOld == '6' && arquivo[i].First() == '1')
                             {
 
-                                using(StreamWriter stw = new StreamWriter(arqConvertido, true, Encoding.Default))
+                                using(StreamWriter stw = new StreamWriter(arqConvertido, true, Encoding.GetEncoding(CultureInfo.GetCultureInfo("pt-BR").TextInfo.ANSICodePage)))
                                 {
                                     stw.WriteLine(l1);
 
@@ -211,7 +212,7 @@ namespace ConvertItabira
                         }
                         else
                         {
-                            using(StreamWriter stw = new StreamWriter(arqConvertido, true, Encoding.Default))
+                            using (StreamWriter stw = new StreamWriter(arqConvertido, true, Encoding.GetEncoding(CultureInfo.GetCultureInfo("pt-BR").TextInfo.ANSICodePage)))
                             {
                                 stw.WriteLine(l1);
 
@@ -229,15 +230,15 @@ namespace ConvertItabira
                                 });
 
                                 //somando todos os juros e atualizações monetarias
-                                foreach(var item in query)
+                                foreach (var item in query)
                                 {
                                     TotalMulta += float.Parse(item.Multa);
                                     ToTalAtuzalizacaoMonetaria += float.Parse(item.AtuMonetaria);
                                 }
 
-                                foreach(var q in query)
+                                foreach (var q in query)
                                 {
-                                    if(q.Ano != 0)
+                                    if (q.Ano != 0)
                                     {
                                         stw.Write("4");
                                         stw.Write($"{q.Ano.ToString().PadLeft(12)}");
@@ -251,17 +252,17 @@ namespace ConvertItabira
                                         stw.Write($"{q.ValorCorrigdo.ToString().PadLeft(12)}");
 
                                         //só grava uma vez na primeira posicão da linha4
-                                        if(gravarTotais == false)
+                                        if (gravarTotais == false)
                                         {
                                             stw.Write($"{TotalMulta.ToString().PadLeft(12)}");
                                             stw.Write($"{ToTalAtuzalizacaoMonetaria.ToString().PadLeft(12)}");
                                             gravarTotais = true;
                                         }
-                                            stw.WriteLine();
+                                        stw.WriteLine();
                                     }
                                 }
 
-                                
+
                                 stw.WriteLine(l6);
 
                                 l1 = string.Empty;
