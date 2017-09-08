@@ -41,9 +41,10 @@
             // 
             // btnSelecionaArq
             // 
-            this.btnSelecionaArq.Location = new System.Drawing.Point(43, 75);
+            this.btnSelecionaArq.Location = new System.Drawing.Point(57, 92);
+            this.btnSelecionaArq.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSelecionaArq.Name = "btnSelecionaArq";
-            this.btnSelecionaArq.Size = new System.Drawing.Size(60, 29);
+            this.btnSelecionaArq.Size = new System.Drawing.Size(80, 36);
             this.btnSelecionaArq.TabIndex = 0;
             this.btnSelecionaArq.Text = "Arquivo";
             this.btnSelecionaArq.UseVisualStyleBackColor = true;
@@ -51,9 +52,10 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(172, 75);
+            this.btnSalvar.Location = new System.Drawing.Point(229, 92);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(60, 29);
+            this.btnSalvar.Size = new System.Drawing.Size(80, 36);
             this.btnSalvar.TabIndex = 2;
             this.btnSalvar.Text = "Convert";
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -61,15 +63,16 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(269, 180);
+            this.ClientSize = new System.Drawing.Size(359, 222);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnSelecionaArq);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Convert Itabira";
+            this.Text = "Convert Mult";
             this.ResumeLayout(false);
 
         }
