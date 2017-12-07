@@ -443,6 +443,9 @@ namespace ConvertItabira
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void clearRadios()
         {
             rdbSize4.Checked = false;
